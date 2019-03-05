@@ -10,6 +10,8 @@ class CalcsController < ApplicationController
       @result = number1 * number2
     elsif params[:calcs] == "division"
       @result = number1 / number2
+    else
+      @result = "正しく計算できません"
     end
   end
 end
