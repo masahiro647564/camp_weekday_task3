@@ -1,17 +1,21 @@
 class CalcsController < ApplicationController
   def show
-    number1 = params[:number1].to_i
-    number2 = params[:number2].to_i
-    if params[:calcs] == "addition"
-      @result = number1 + number2
-    elsif params[:calcs] == "subtraction"
-      @result = number1 - number2
-    elsif params[:calcs] == "multiplication"
-      @result = number1 * number2
-    elsif params[:calcs] == "division"
-      @result = number1 / number2
-    else
-      @result = "正しく計算できません"
+    num1 = params[:num1].to_i
+    num2 = params[:num2].to_i
+    operator = params[:operator]
+
+    @result = case operator
+              when "addition"
+                num1 + num2.to_f
+              when "subtraction" 
+                num1 - num2.to_f
+              when "multiplication" 
+                num1 * num2.to_f
+              when "division"
+                num1 / num2.to_f
+              else
+                @result = "計算できません"
     end
   end
 end
+
