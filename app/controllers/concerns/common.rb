@@ -24,7 +24,7 @@ module Common
               "divided by 0"
             end
           else
-            "計算が正しくありません"
+            "URLが正しくありません"
           end
   end
 end
