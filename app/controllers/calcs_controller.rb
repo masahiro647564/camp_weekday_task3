@@ -6,16 +6,16 @@ class CalcsController < ApplicationController
 
     @result = case operator
               when "addition"
-                num1 + num2.to_f
+                num1 + num2
               when "subtraction" 
-                num1 - num2.to_f
+                num1 - num2
               when "multiplication" 
-                num1 * num2.to_f
+                num1 * num2
               when "division"
-                num1 / num2.to_f
+                num1 / num2
               else
-                @result = "計算できません"
-    end
+                "計算できません"
+              end
   end
 end
 
