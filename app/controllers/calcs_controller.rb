@@ -12,7 +12,7 @@ class CalcsController < ApplicationController
               when "multiplication" 
                 num1 * num2
               when "division"
-                num1 / num2
+                num2 == 0 ? "0で割ることはできません" : num1 / num2.to_f
               else
                 "計算できません"
               end
