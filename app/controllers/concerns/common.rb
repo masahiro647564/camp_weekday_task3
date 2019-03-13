@@ -15,14 +15,12 @@ module Common
                 num1 * num2
               when "division"
               begin 
-                if num1 % num2 == 0
-                "#{num1 / num2}"
-                else
                 "#{num1 / num2}..#{num1 % num2}"
-                end
               rescue ZeroDivisionError 
                 "divided by 0"
               end
+            else
+              "URLが正しくありません"
             end
             
   end
