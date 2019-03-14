@@ -19,9 +19,6 @@ module Common
               rescue ZeroDivisionError 
                 "divided by 0"
               end
-            else
-              "URLが正しくありません"
-            end
-            
+            end  
   end
 end
