@@ -16,8 +16,8 @@ module Common
               when "division"
               begin 
                 "#{num1 / num2}..#{num1 % num2}"
-              rescue ZeroDivisionError 
-                "divided by 0"
+              rescue ZeroDivisionError => e 
+                e
               end
             end  
   end
